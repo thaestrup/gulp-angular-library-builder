@@ -1,0 +1,45 @@
+{
+    "name": "gulp-angular-library-builder",
+    "version": "1.0.0",
+    "description": "Gulp module to set up common tasks building an Angular library.",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Nykredit/gulp-angular-library-builder.git"
+    },
+    "author": {
+      "name": "Nykredit IT Infratructure",
+      "email": "infrastructure@nykredit.dk"
+    },
+    "maintainers": [
+      {
+        "name": "Thor Lange",
+        "email": "tal@nykredit.dk"
+      }
+    ],
+    "files": ["lib"],
+    "main": "lib/index.js",
+    "dependencies": {
+        "del": "^2.2.0",
+        "eslint": "^2.5.3",
+        "eslint-plugin-angular": "^1.0.0",
+        "gulp": "^3.9.1",
+        "gulp-angular-filesort": "^1.1.1",
+        "gulp-bower": "^0.0.13",
+        "gulp-concat": "^2.6.0",
+        "gulp-eslint": "^2.0.0",
+        "gulp-git-release": "^1.0.6",
+        "gulp-ng-template-strings": "^0.0.4",
+        "jasmine-core": "^2.4.1",
+        "karma": "^0.13.22",
+        "karma-angular-filesort": "^1.0.1",
+        "karma-coverage": "^0.5.5",
+        "karma-jasmine": "^0.3.8",
+        "karma-junit-reporter": "^0.4.1",
+        "karma-ng-html2js-preprocessor": "^0.2.1",
+        "karma-phantomjs-launcher": "^1.0.0",
+        "object-assign": "^4.0.1",
+        "phantomjs-prebuilt": "^2.1.7",
+        "wiredep": "^4.0.0"
+    }
+}
