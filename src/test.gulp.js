@@ -11,7 +11,7 @@ module.exports = function (options) {
         return bower();
     });
 
-    gulp.task('watch-test', function() {
+    gulp.task('watch-test', function () {
         gulp.watch(path.join(options.src, '**/*.js'), ['test']);
     });
 
@@ -26,4 +26,4 @@ module.exports = function (options) {
             singleRun: true
         }, cb).start();
     });
-}
+};

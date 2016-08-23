@@ -7,4 +7,4 @@ module.exports = function (options) {
     gulp.task('clean', function (cb) {
         del(options.dist, cb);
     });
-}
+};

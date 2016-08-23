@@ -8,4 +8,4 @@ module.exports = function (options) {
         return gulp.src([path.join(options.dist, 'build/**/*'), 'bower.json', 'README.md'])
             .pipe(gulp.dest(path.join(options.dist, 'distribution')));
     });
-}
+};
