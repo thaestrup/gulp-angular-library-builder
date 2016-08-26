@@ -1,0 +1,230 @@
+ecmaFeatures:
+  jsx: false
+
+env:
+  browser: false
+  es6: false
+  node: true
+  jasmine: true
+
+plugins:
+  - angular
+
+globals:
+  angular: true
+  inject: true
+  window: true
+  Chartist: true
+  navigator: true
+  XMLHttpRequest: true
+  XDomainRequest: true
+
+settings:
+  angular: 1
+
+rules:
+# Possible Errors
+  comma-dangle: [2, "never"] # disallow trailing commas
+  no-cond-assign: 2 # disallow assignment in conditional expressions
+  no-console: 0 # disallow use of console - use logging library instead
+  no-constant-condition: 2 # disallow use of constant expressions in conditions
+  no-control-regex: 2 # disallow control characters in regular expressions
+  no-debugger: 2 # disallow use of debugger
+  no-dupe-keys: 2 # disallow duplicate keys when creating object literals
+  no-empty-character-class: 2 # disallow the use of empty character classes in regular expressions
+  no-ex-assign: 2 # disallow assigning to the exception in a catch block
+  no-extra-boolean-cast: 2 # disallow double-negation boolean casts in a boolean context
+  no-extra-parens: 0 # disallow unnecessary parentheses
+  no-extra-semi: 2 # disallow unnecessary semicolons
+  no-func-assign: 2 # disallow overwriting functions written as function declarations
+  no-inner-declarations: [0, "both"] # disallow function or variable declarations in nested blocks
+  no-invalid-regexp: 2 # disallow invalid regular expression strings in the RegExp constructor
+  no-irregular-whitespace: 2 # disallow irregular whitespace outside of strings and comments
+  no-negated-in-lhs: 2 # disallow negation of the left operand of an in expression
+  no-obj-calls: 2 # disallow the use of object properties of the global object (Math and JSON) as functions
+  no-regex-spaces: 2 # disallow multiple spaces in a regular expression literal
+  no-sparse-arrays: 2 # disallow sparse arrays
+  no-unreachable: 2 # disallow unreachable statements after a return, throw, continue, or break statement
+  use-isnan: 2 # disallow comparisons with the value NaN
+  valid-jsdoc: 0 # ensure JSDoc comments are valid
+  valid-typeof: 2 # ensure that the results of typeof are compared against a valid string
+
+  # Best Practices
+  block-scoped-var: 2 # treat var statements as if they were block scoped
+  complexity: 0 # specify the maximum cyclomatic complexity allowed in a program
+  consistent-return: 2 # require return statements to either always or never specify values
+  curly: [2, "all"] # specify curly brace conventions for all control statements
+  default-case: 2 # require default case in switch statements
+  dot-notation: 2 # encourages use of dot notation whenever possible
+  eqeqeq: [2, "smart"] # require the use of === and !==
+  guard-for-in: 2 # make sure for-in loops have an if statement
+  no-alert: 2 # disallow the use of alert, confirm, and prompt
+  no-caller: 2 # disallow use of arguments.caller or arguments.callee
+  no-div-regex: 2 # disallow division operators explicitly at beginning of regular expression
+  no-else-return: 1 # disallow else after a return in an if
+  no-eq-null: 0 # disallow comparisons to null without a type-checking operator
+  no-eval: 2 # disallow use of eval()
+  no-extend-native: 2 # disallow adding to native types
+  no-extra-bind: 2 # disallow unnecessary function binding
+  no-fallthrough: 2 # disallow fallthrough of case statements
+  no-floating-decimal: 2 # disallow the use of leading or trailing decimal points in numeric literals
+  no-implied-eval: 2 # disallow use of eval()-like methods
+  no-iterator: 2 # disallow usage of __iterator__ property
+  no-labels: 2 # disallow use of labeled statements
+  no-lone-blocks: 2 # disallow unnecessary nested blocks
+  no-loop-func: 2 # disallow creation of functions within loops
+  no-mixed-requires: 0 # require assignment mixed with other assignment
+  no-multi-spaces: 1 # disallow use of multiple spaces
+  no-multi-str: 2 # disallow use of multiline strings
+  no-native-reassign: 2 # disallow reassignments of native objects
+  no-new: 2 # disallow use of new operator when not part of the assignment or comparison
+  no-new-func: 2 # disallow use of new operator for Function object
+  no-new-wrappers: 2 # disallows creating new instances of String, Number and Boolean
+  no-octal: 2 # disallow use of octal literals
+  no-octal-escape: 2 # disallow use of octal escape sequences in string literals, such as var foo = "Copyright \251";
+  no-process-env: 1 # disallow use of process.env
+  no-proto: 2 # disallow usage of __proto__ property
+  no-redeclare: 2 # disallow declaring the same variable more then once
+  no-return-assign: 2 # disallow use of assignment in return statement
+  no-script-url: 2 # disallow use of javascript: urls
+  no-self-compare: 2 # disallow comparisons where both sides are exactly the same
+  no-sequences: 2 # disallow use of comma operator
+  no-throw-literal: 2 # restrict what can be thrown as an exception
+  no-unused-expressions: 2 # disallow usage of expressions in statement position
+  no-void: 2 # disallow use of void operator
+  no-warning-comments: 0 # disallow usage of configurable warning terms in comments - e.g. TODO or FIXME
+  no-with: 2 # disallow use of the with statement
+  radix: 1 # require use of the second argument for parseInt()
+  vars-on-top: 0 # requires to declare all vars on top of their containing scope
+  wrap-iife: 2 # require immediate function invocation to be wrapped in parentheses
+  yoda: 2 # require or disallow Yoda conditions
+
+  # Strict Mode
+  strict: [1, "global"] # controls location of Use Strict Directives
+
+  # Variables
+  no-catch-shadow: 2 # disallow the catch clause parameter name being the same as a variable in the outer scope
+  no-delete-var: 2 # disallow deletion of variables
+  no-label-var: 2 # disallow labels that share a name with a variable
+  no-shadow: 2 # disallow declaration of variables already declared in the outer scope
+  no-shadow-restricted-names: 2 # disallow shadowing of names such as arguments
+  no-undef: 2 # disallow use of undeclared variables unless mentioned in a /*global */ block
+  no-undef-init: 2 # disallow use of undefined when initializing variables
+  no-undefined: 0 # disallow use of undefined variable
+  no-unused-vars: 2 # disallow declaration of variables that are not used in the code
+  no-use-before-define: 2 # disallow use of variables before they are defined
+
+  # Stylistic Issues
+  indent: [2, 4] # indent 4 spaces
+  brace-style: [1, "1tbs", { "allowSingleLine": true }] # enforce one true brace style
+  camelcase: 1 # require camel case names
+  comma-spacing: [1, {"before": false, "after": true}] # enforce spacing before and after comma
+  comma-style: [1, "last"] # enforce one true comma style
+  consistent-this: [1, "vm"] # enforces consistent naming when capturing the current execution context
+  eol-last: 2 # enforce newline at the end of file, with no multiple empty lines
+  func-names: 0 # require function expressions to have a name
+  func-style: 0 # enforces use of function declarations or expressions
+  key-spacing: [1, { "beforeColon": false, "afterColon": true }] # enforces spacing between keys and values in object literal properties
+  max-nested-callbacks: [2, 5] # specify the maximum depth callbacks can be nested
+  new-cap: 2 # require a capital letter for constructors
+  new-parens: 2 # disallow the omission of parentheses when invoking a constructor with no arguments
+  no-array-constructor: 2 # disallow use of the Array constructor
+  no-inline-comments: 0 # disallow comments inline after code
+  no-lonely-if: 2 # disallow if as the only statement in an else block
+  no-mixed-spaces-and-tabs: 2 # disallow mixed spaces and tabs for indentation
+  no-multiple-empty-lines: 1 # disallow multiple empty lines
+  no-nested-ternary: 0 # disallow nested ternary expressions
+  no-new-object: 2 # disallow use of the Object constructor
+  no-spaced-func: 2 # disallow space between function identifier and application
+  no-ternary: 0 # disallow the use of ternary operators
+  no-trailing-spaces: 2 # disallow trailing whitespace at the end of lines
+  no-underscore-dangle: 0 # disallow dangling underscores in identifiers
+  one-var: 0 # allow just one var statement per function
+  operator-assignment: 0 # require assignment operator shorthand where possible or prohibit it entirely
+  padded-blocks: 0 # enforce padding within blocks
+  quote-props: [0, "as-needed"] # require quotes around object literal property names
+  quotes: [0, "single"] # specify whether double or single quotes should be used
+  semi: [2, "always"] # require or disallow use of semicolons instead of ASI
+  semi-spacing: [1, {"before": false, "after": true}] # enforce spacing before and after semicolons
+  sort-vars: 0 # sort variables within the same declaration block
+  space-before-blocks: [1, "always"] # require or disallow space before blocks
+  space-before-function-paren: [1, {"anonymous": "always", "named": "never"}] # require or disallow space before function parentheses
+  space-in-brackets: [0, "never"] # require or disallow spaces inside brackets
+  space-in-parens: [2, "never"] # require or disallow spaces inside parentheses
+  space-infix-ops: 2 # require spaces around operators
+  keyword-spacing: ["error", { "before": true }]
+  space-unary-ops: 2 # require or disallow spaces before/after unary operators (words on by default, nonwords off by default)
+  spaced-comment: 0 # require or disallow a space immediately following the // in a line comment
+  wrap-regex: 0 # require regex literals to be wrapped in parentheses
+  no-var: 0 # require let or const instead of var
+  generator-star-spacing: [2, {"before": false, "after": true}] # enforce the position of the * in generator functions
+
+  # Legacy
+  max-depth: [2, 5] # specify the maximum depth that blocks can be nested
+  max-len: [1, 144] # specify the maximum length of a line in your program
+  max-params: [2, 8] # limits the number of parameters that can be used in the function declaration.
+  max-statements: [1, 50] # specify the maximum number of statement allowed in a function
+  no-bitwise: 2 # disallow use of bitwise operators
+  no-plusplus: 0 # disallow use of unary operators, ++ and --
+
+  #Angular - Possible Errors
+  angular/module-getter: 2              # - disallow to reference modules with variables and require to use the getter syntax instead angular.module('myModule') (y022)
+  angular/module-setter: 2              # - disallow to assign modules to variables (linked to module-getter (y021)
+  angular/no-private-call: 2            # - disallow use of internal angular properties prefixed with $$
+
+  #Angular - Best Practices
+  angular/component-limit: 1            # - limit the number of angular components per file (y001)
+  angular/controller-as-route: 2        # - require the use of controllerAs in routes or states (y031)
+  angular/controller-as-vm: 2           # - require and specify a capture variable for this in controllers (y032)
+  angular/controller-as: 2              # - disallow assignments to $scope in controllers (y031)
+  angular/deferred: 2                   # - use $q(function(resolve, reject){}) instead of $q.deferred
+  angular/di-unused: 2                  # - disallow unused DI parameters
+  angular/directive-restrict: 2         # - disallow any other directive restrict than 'A' or 'E' (y074)
+  angular/empty-controller: 2           # - disallow empty controllers
+  angular/no-controller: 1              # - disallow use of controllers (according to the component first pattern)
+  angular/no-inline-template: 2         # - disallow the use of inline templates
+  angular/no-run-logic: 2               # - keep run functions clean and simple (y171)
+  angular/no-services: 2                # - disallow DI of specified services for other angular components ($http for controllers, filters and directives)
+  angular/on-watch: 2                   # - require $on and $watch deregistration callbacks to be saved in a variable
+
+  #Angular - Deprecated Angular Features
+  angular/no-cookiestore: 2             # - use $cookies instead of $cookieStore
+  angular/no-directive-replace: 2       # - disallow the deprecated directive replace property
+  angular/no-http-callback: 2           # - disallow the $http methods success() and error()
+
+  #Angular - Naming
+  angular/controller-name: 2            # - require and specify a prefix for all controller names (y123, y124)
+  angular/directive-name: 2             # - require and specify a prefix for all directive names (y073, y126)
+  angular/file-name: 0                  # - require and specify a consistent component name pattern (y120, y121)
+  angular/filter-name: 2                # - require and specify a prefix for all filter names
+  angular/module-name: 2                #  - require and specify a prefix for all module names (y127)
+  angular/service-name: 2               #   - require and specify a prefix for all service names (y125)
+
+  #Angular - Conventions
+  angular/di-order: 1                   # - require DI parameters to be sorted alphabetically
+  angular/di: 2                         # - require a consistent DI syntax
+  angular/dumb-inject: 1                # - unittest inject functions should only consist of assignments from injected values to describe block variables
+  angular/function-type: [2, 'named']   # - require and specify a consistent function style for components ('named' or 'anonymous') (y024)
+  angular/module-dependency-order: 2    # - require a consistent order of module dependencies
+  angular/no-service-method: 0          # - use factory() instead of service() (y040)
+  angular/rest-service: 2               # - disallow different rest service and specify one of '$http', '$resource', 'Restangular'
+  angular/watchers-execution: 2         # - require and specify consistent use $scope.digest() or $scope.apply()
+
+  #Angular - Wrappers
+  angular/angularelement: 2             # - use angular.element instead of $ or jQuery
+  angular/definedundefined: 2           # - use angular.isDefined and angular.isUndefined instead of other undefined checks
+  angular/document-service: 2           # - use $document instead of document (y180)
+  angular/foreach: 2                    # - use angular.forEach instead of native Array.prototype.forEach
+  angular/interval-service: 2           # - use $interval instead of setInterval (y181)
+  angular/json-functions: 2             # - use angular.fromJson and 'angular.toJson' instead of JSON.parse and JSON.stringify
+  angular/log: 2                        # - use the $log service instead of the console methods
+  angular/no-angular-mock: 2            # - require to use angular.mock methods directly
+  angular/no-jquery-angularelement: 2   # - disallow to wrap angular.element objects with jQuery or $
+  angular/timeout-service: 2            # - use $timeout instead of setTimeout (y181)
+  angular/typecheck-array: 2            # - use angular.isArray instead of typeof comparisons
+  angular/typecheck-date: 2             # - use angular.isDate instead of typeof comparisons
+  angular/typecheck-function: 2         # - use angular.isFunction instead of typeof comparisons
+  angular/typecheck-number: 2           # - use angular.isNumber instead of typeof comparisons
+  angular/typecheck-object: 2           # - use angular.isObject instead of typeof comparisons
+  angular/typecheck-string: 2           # - use angular.isString instead of typeof comparisons
+  angular/window-service: 2             # - use $window instead of window (y180)

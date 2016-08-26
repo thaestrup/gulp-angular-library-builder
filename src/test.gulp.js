@@ -11,19 +11,20 @@ module.exports = function (options) {
         return bower();
     });
 
-    gulp.task('watch-test', function() {
-        gulp.watch(path.join(options.src, '**/*.js'), ['test']);
-    });
-
     gulp.task('test', ['bower'], function (cb) {
         var bowerDeps = wiredep({
             dependencies: true,
             devDependencies: true
         });
-        new Server({
+        var karmaoptions = {
             configFile: __dirname + '/karma.conf.js',
             files: bowerDeps.js.concat(path.join(options.src, '**/*.js')),
+            dist: 'target',
             singleRun: true
-        }, cb).start();
+        };
+        if (options.dist) {
+            karmaoptions.dist = options.dist;
+        }
+        new Server(karmaoptions, cb).start();
     });
-}
+};
