@@ -26,4 +26,4 @@ module.exports = function (options) {
     });
 
     gulp.task('build', ['lint', 'test', 'concat', 'html']);
-}
+};

@@ -17,10 +17,8 @@
             "email": "tal@nykredit.dk"
         }
     ],
-    "files": [
-        "lib"
-    ],
-    "main": "lib/index.js",
+    "files": ["src"],
+    "main": "src/index.js",
     "dependencies": {
         "del": "^2.2.0",
         "eslint": "^3.3.1",

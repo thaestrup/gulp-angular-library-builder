@@ -1,7 +1,6 @@
 'use strict';
 
-var assign = require('object-assign'),
-    gulp = require('gulp');
+var assign = require('object-assign');
 
 module.exports = function (options) {
 
@@ -10,12 +9,10 @@ module.exports = function (options) {
         src: 'src',
         dist: 'dist'
     }, options);
-
     require('./clean.gulp')(options);
     require('./lint.gulp')(options);
     require('./test.gulp')(options);
     require('./build.gulp')(options);
     require('./dist.gulp')(options);
     require('./release.gulp')(options);
-
-}
+};
