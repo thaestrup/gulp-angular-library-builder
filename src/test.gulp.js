@@ -10,6 +10,9 @@ module.exports = function (options) {
     gulp.task('bower', function () {
         return bower();
     });
+    gulp.task('watch-test', function () {
+        gulp.watch(path.join(options.src, '**/*.js'), ['test']);
+    });
 
     gulp.task('test', ['bower'], function (cb) {
         var bowerDeps = wiredep({
