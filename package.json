@@ -17,7 +17,9 @@
             "email": "tal@nykredit.dk"
         }
     ],
-    "files": ["src"],
+    "files": [
+        "src"
+    ],
     "main": "src/index.js",
     "dependencies": {
         "del": "^2.2.0",
@@ -30,7 +32,7 @@
         "gulp-eslint": "^3.0.1",
         "gulp-git-release": "^1.0.6",
         "gulp-ng-template-strings": "^0.0.4",
-        "jasmine-core": "^2.4.1",
+        "jasmine-core": "^2.5.0",
         "karma": "^1.2.0",
         "karma-angular-filesort": "^1.0.1",
         "karma-coverage": "^1.1.1",
