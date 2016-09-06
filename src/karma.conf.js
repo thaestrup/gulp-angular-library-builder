@@ -24,7 +24,7 @@ module.exports = function (config) {
         angularFilesort: {
             whitelist: [
                 'src/**/*.js',
-                'tmp/**/*.js'
+                'dist/ts/**/*.js'
             ]
         },
         plugins: [

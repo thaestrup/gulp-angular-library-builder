@@ -8,7 +8,7 @@ module.exports = function (options, gulp) {
         name: 'no-name',
         src: 'src',
         dist: 'dist',
-        tmp: 'tmp'
+        ts: 'dist/ts'  
     }, options);
 
     require('./clean.gulp')(options, gulp);
