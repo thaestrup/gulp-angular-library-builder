@@ -1,10 +1,9 @@
 'use strict';
 
-var gulp = require('gulp'),
-    path = require('path'),
+var path = require('path'),
     release = require('gulp-git-release');
 
-module.exports = function (options) {
+module.exports = function (options, gulp) {
     gulp.task('prerelease', ['dist'], function () {
         return gulp.src(path.join(options.dist, 'distribution', '**')).pipe(release({
             prefix: path.join(options.dist, 'distribution'),

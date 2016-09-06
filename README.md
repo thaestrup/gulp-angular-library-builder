@@ -12,6 +12,7 @@ By default the following directory structure would end up something like the fol
 
     |---- bower_components
     |---- dist
+    |---- tmp
     |---- node_modules
     |---- src
     |     |---- component.a
@@ -24,6 +25,8 @@ By default the following directory structure would end up something like the fol
 It is assumed that Bower is used to resolve dependencies needed for the library. It is also assumed Bower is used for distributing the library. The resolved dependencies is going to be placed in the ``bower_components`` directory.
 
 The ``dist`` directory is going to contain all build artifact.
+
+The ``tmp`` directory is going to typescript transpiled temporary output
 
 The ``node_modules`` directory is containing the build module itself possibly along with other required modules.
 

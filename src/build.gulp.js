@@ -2,13 +2,12 @@
 
 var angularFilesort = require('gulp-angular-filesort'),
     concat = require('gulp-concat'),
-    gulp = require('gulp'),
     ngTemplateStrings = require('gulp-ng-template-strings'),
     path = require('path');
 
-module.exports = function (options) {
-    gulp.task('templates', function () {
-        return gulp.src([path.join(options.src, '**/*.js'), '!**/*.spec.js'])
+module.exports = function (options, gulp) {
+    gulp.task('templates', ['ts'], function () {
+        return gulp.src([path.join(options.src, '**/*.js'), path.join(options.tmp, '**/*.js'), '!**/*.spec.js'])
             .pipe(ngTemplateStrings({ cwd: options.src }))
             .pipe(gulp.dest(path.join(options.dist, 'templates')));
     });
@@ -25,5 +24,5 @@ module.exports = function (options) {
             .pipe(gulp.dest(path.join(options.dist, 'build')));
     });
 
-    gulp.task('build', ['lint', 'test', 'concat', 'html']);
+    gulp.task('build', ['ts', 'lint', 'test', 'concat', 'html']);
 }

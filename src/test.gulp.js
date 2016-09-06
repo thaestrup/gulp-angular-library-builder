@@ -1,17 +1,16 @@
 'use strict';
 
 var bower = require('gulp-bower'),
-    gulp = require('gulp'),
-    Server = require('karma').Server,
-    path = require('path'),
-    wiredep = require('wiredep');
+        Server = require('karma').Server,
+        path = require('path'),
+        wiredep = require('wiredep');
 
-module.exports = function (options) {
+module.exports = function (options, gulp) {
     gulp.task('bower', function () {
         return bower();
     });
 
-    gulp.task('watch-test', function() {
+    gulp.task('watch-test', function () {
         gulp.watch(path.join(options.src, '**/*.js'), ['test']);
     });
 
@@ -22,7 +21,7 @@ module.exports = function (options) {
         });
         new Server({
             configFile: __dirname + '/karma.conf.js',
-            files: bowerDeps.js.concat(path.join(options.src, '**/*.js')),
+            files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.tmp, '**/*.js')),
             singleRun: true
         }, cb).start();
     });
