@@ -2,9 +2,10 @@
 
 var eslint = require('gulp-eslint'),
     fs = require('fs'),
+    gulp = require('gulp'),
     path = require('path');
 
-module.exports = function (options, gulp) {
+module.exports = function (options) {
 
     gulp.task('eslint', function () {
         var out;

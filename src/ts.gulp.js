@@ -2,9 +2,10 @@
 
 var sourcemaps = require('gulp-sourcemaps'),
     ts = require('gulp-typescript'),
+    gulp = require('gulp'),
     path = require('path');
 
-module.exports = function (options, gulp) {
+module.exports = function (options) {
 
     var defaults = {
         compilerOptions: {
@@ -28,17 +29,10 @@ module.exports = function (options, gulp) {
             }),
             tsResult = gulp.src(path.join(options.src, '**/*.ts'))
                 .pipe(sourcemaps.init())
-                .pipe(ts(tsProject));
-
-        return tsResult.js
-            .pipe(sourcemaps.write('maps'))
-            .pipe(gulp.dest(options.tmp));
+                .pipe(ts(tsProject)).js
+                .pipe(sourcemaps.write('maps'))
+                .pipe(gulp.dest(options.ts));
+        return tsResult;
     });
     
 };
-
-
-    
-    
-
-    

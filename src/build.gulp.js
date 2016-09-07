@@ -2,10 +2,11 @@
 
 var angularFilesort = require('gulp-angular-filesort'),
     concat = require('gulp-concat'),
+    gulp = require('gulp'),
     ngTemplateStrings = require('gulp-ng-template-strings'),
     path = require('path');
 
-module.exports = function (options, gulp) {
+module.exports = function (options) {
     gulp.task('templates', ['ts'], function () {
         return gulp.src([path.join(options.src, '**/*.js'), path.join(options.ts, '/**/*.js'), '!**/*.spec.js'])
             .pipe(ngTemplateStrings({ cwd: options.src }))

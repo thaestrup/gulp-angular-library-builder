@@ -1,8 +1,9 @@
 'use strict';
 
-var assign = require('object-assign')
+var assign = require('object-assign'),
+    gulp = require('gulp');
 
-module.exports = function (options, gulp) {
+module.exports = function (options) {
 
     options = assign({}, {
         name: 'no-name',
@@ -11,12 +12,12 @@ module.exports = function (options, gulp) {
         ts: 'dist/ts'  
     }, options);
 
-    require('./clean.gulp')(options, gulp);
-    require('./lint.gulp')(options, gulp);
-    require('./test.gulp')(options, gulp);
-    require('./build.gulp')(options, gulp);
-    require('./dist.gulp')(options, gulp);
-    require('./release.gulp')(options, gulp);
-    require('./ts.gulp')(options, gulp);
+    require('./clean.gulp')(options);
+    require('./lint.gulp')(options);
+    require('./test.gulp')(options);
+    require('./build.gulp')(options);
+    require('./dist.gulp')(options);
+    require('./release.gulp')(options);
+    require('./ts.gulp')(options);
 
 }
