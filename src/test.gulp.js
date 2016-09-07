@@ -23,6 +23,6 @@ module.exports = function (options, gulp) {
             configFile: __dirname + '/karma.conf.js',
             files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.ts, '/**/*.js')),
             singleRun: true
-        }, cb).start();
+        }, function() {cb();}).start();
     });
 }
