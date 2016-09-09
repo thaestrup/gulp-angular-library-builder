@@ -1,6 +1,6 @@
 {
     "name": "gulp-angular-library-builder",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Gulp module to set up common tasks building an Angular library.",
     "license": "MIT",
     "repository": {
