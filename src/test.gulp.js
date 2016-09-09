@@ -22,8 +22,10 @@ module.exports = function (options) {
         });
         new Server({
             configFile: __dirname + '/karma.conf.js',
-            files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.ts, '/**/*.js')),
-            singleRun: true
+            files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.dist, 'ts/**/*.js')),
+            singleRun: true,
+            dist: options.dist,
+            ts: path.join(options.dist, 'ts/**/*.js')
         }, cb).start();
     });
-}
+};

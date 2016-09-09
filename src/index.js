@@ -1,15 +1,13 @@
 'use strict';
 
-var assign = require('object-assign'),
-    gulp = require('gulp');
+var assign = require('object-assign');
 
 module.exports = function (options) {
 
     options = assign({}, {
         name: 'no-name',
         src: 'src',
-        dist: 'dist',
-        ts: 'dist/ts'  
+        dist: 'dist'
     }, options);
 
     require('./clean.gulp')(options);

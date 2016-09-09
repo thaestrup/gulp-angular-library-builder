@@ -10,21 +10,21 @@ module.exports = function (config) {
         },
         reporters: ['progress', 'junit', 'coverage'],
         junitReporter: {
-            outputDir: 'dist',
+            outputDir: config.dist,
             outputFile: 'test-results.xml',
             suite: '',
             useBrowserName: false
         },
         coverageReporter: {
             type: 'cobertura',
-            dir: 'dist',
+            dir: config.dist,
             file: 'cobertura-coverage.xml',
             subdir: '.'
         },
         angularFilesort: {
             whitelist: [
                 'src/**/*.js',
-                'dist/ts/**/*.js'
+                config.ts
             ]
         },
         plugins: [

@@ -31,8 +31,8 @@ module.exports = function (options) {
                 .pipe(sourcemaps.init())
                 .pipe(ts(tsProject)).js
                 .pipe(sourcemaps.write('maps'))
-                .pipe(gulp.dest(options.ts));
+                .pipe(gulp.dest(path.join(options.dist, "ts")));
         return tsResult;
     });
-    
+
 };
