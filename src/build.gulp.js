@@ -25,5 +25,5 @@ module.exports = function (options) {
             .pipe(gulp.dest(path.join(options.dist, 'build')));
     });
 
-    gulp.task('build', ['ts', 'lint', 'test', 'concat', 'html']);
+    gulp.task('build', ['lint', 'test', 'concat', 'html']);
 }

@@ -24,6 +24,6 @@ module.exports = function (options) {
             configFile: __dirname + '/karma.conf.js',
             files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.ts, '/**/*.js')),
             singleRun: true
-        }, function() {cb();}).start();
+        }, cb).start();
     });
 }
