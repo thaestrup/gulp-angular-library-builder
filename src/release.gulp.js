@@ -1,7 +1,7 @@
 'use strict';
 
-var gulp = require('gulp'),
-    path = require('path'),
+var path = require('path'),
+    gulp = require('gulp'),
     release = require('gulp-git-release');
 
 module.exports = function (options) {

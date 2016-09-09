@@ -1,28 +1,28 @@
 'use strict';
 
 var bower = require('gulp-bower'),
-    gulp = require('gulp'),
-    Server = require('karma').Server,
-    path = require('path'),
-    wiredep = require('wiredep');
+        Server = require('karma').Server,
+        path = require('path'),
+        gulp = require('gulp'),
+        wiredep = require('wiredep');
 
 module.exports = function (options) {
     gulp.task('bower', function () {
         return bower();
     });
 
-    gulp.task('watch-test', function() {
+    gulp.task('watch-test', function () {
         gulp.watch(path.join(options.src, '**/*.js'), ['test']);
     });
 
-    gulp.task('test', ['bower'], function (cb) {
+    gulp.task('test', ['bower', 'ts'], function (cb) {
         var bowerDeps = wiredep({
             dependencies: true,
             devDependencies: true
         });
         new Server({
             configFile: __dirname + '/karma.conf.js',
-            files: bowerDeps.js.concat(path.join(options.src, '**/*.js')),
+            files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.ts, '/**/*.js')),
             singleRun: true
         }, cb).start();
     });

@@ -3,7 +3,9 @@ Gulp module to set up common Gulp tasks when building an Angular library.
 
 Basically the module will setup the following tasks.
 - clean - removing generated files
+- ts - Transpile all typescript files.
 - build - get all the source code ready primarily inlining of Angular templates
+- test - run all *_spec.js unit tests.
 - dist - add a few extra files to the source code that was build such as README.md, bower.json etc.
 - prerelease - push the complete set of distribution files to a Git distribution repository tagging with a semver compliant pre-release tag
 - release - push the complete set of distribution files to a Git distribution repository tagging with a semver compliant release tag bumping the version of the source code and pushing this back to its Git ``origin``
@@ -12,6 +14,7 @@ By default the following directory structure would end up something like the fol
 
     |---- bower_components
     |---- dist
+          |---- ts
     |---- node_modules
     |---- src
     |     |---- component.a
@@ -24,6 +27,8 @@ By default the following directory structure would end up something like the fol
 It is assumed that Bower is used to resolve dependencies needed for the library. It is also assumed Bower is used for distributing the library. The resolved dependencies is going to be placed in the ``bower_components`` directory.
 
 The ``dist`` directory is going to contain all build artifact.
+
+The ``dist\ts`` directory is going to contain typescript transpiled artifacts.
 
 The ``node_modules`` directory is containing the build module itself possibly along with other required modules.
 

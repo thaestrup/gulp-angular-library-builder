@@ -8,7 +8,8 @@ module.exports = function (options) {
     options = assign({}, {
         name: 'no-name',
         src: 'src',
-        dist: 'dist'
+        dist: 'dist',
+        ts: 'dist/ts'  
     }, options);
 
     require('./clean.gulp')(options);
@@ -17,5 +18,6 @@ module.exports = function (options) {
     require('./build.gulp')(options);
     require('./dist.gulp')(options);
     require('./release.gulp')(options);
+    require('./ts.gulp')(options);
 
 }
