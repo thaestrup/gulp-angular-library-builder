@@ -2,7 +2,7 @@
 
 module.exports = function (config) {
     config.set({
-        basePath: '../../..',
+        basePath: process.cwd(),
         frameworks: ['jasmine', 'angular-filesort'],
         files: ['**/*.spec.js'],
         preprocessors: {
@@ -23,7 +23,8 @@ module.exports = function (config) {
         },
         angularFilesort: {
             whitelist: [
-                'src/**/*.js'
+                'src/**/*.js',
+                config.ts
             ]
         },
         plugins: [

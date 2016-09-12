@@ -1,6 +1,6 @@
 {
     "name": "gulp-angular-library-builder",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Gulp module to set up common tasks building an Angular library.",
     "license": "MIT",
     "repository": {
@@ -15,31 +15,43 @@
         {
             "name": "Thor Lange",
             "email": "tal@nykredit.dk"
+        },
+        {
+            "name": "Bo Leer-Andersen",
+            "email": "bola@nykredit.dk"
+        },
+        {
+            "name": "Jesper Vrelitz",
+            "email": "jvr@nykredit.dk"
         }
     ],
     "files": ["src"],
     "main": "src/index.js",
     "dependencies": {
-        "del": "^2.2.0",
-        "eslint": "^3.3.1",
-        "eslint-plugin-angular": "^1.0.0",
-        "gulp": "^3.9.1",
-        "gulp-angular-filesort": "^1.1.1",
-        "gulp-bower": "^0.0.13",
-        "gulp-concat": "^2.6.0",
-        "gulp-eslint": "^3.0.1",
-        "gulp-git-release": "^1.0.6",
-        "gulp-ng-template-strings": "^0.0.4",
-        "jasmine-core": "^2.4.1",
-        "karma": "^1.2.0",
-        "karma-angular-filesort": "^1.0.1",
-        "karma-coverage": "^1.1.1",
-        "karma-jasmine": "^1.0.2",
-        "karma-junit-reporter": "^1.1.0",
-        "karma-ng-html2js-preprocessor": "^1.0.0",
-        "karma-phantomjs-launcher": "^1.0.0",
-        "object-assign": "^4.0.1",
-        "phantomjs-prebuilt": "^2.1.7",
-        "wiredep": "^4.0.0"
+        "del": "2.2.0",
+        "eslint": "3.3.1",
+        "eslint-plugin-angular": "1.0.0",
+        "gulp": "3.9.1",
+        "gulp-angular-filesort": "1.1.1",
+        "gulp-bower": "0.0.13",
+        "gulp-concat": "2.6.0",
+        "gulp-eslint": "3.0.1",
+        "gulp-git-release": "1.0.6",
+        "gulp-ng-template-strings": "0.0.4",
+        "jasmine-core": "2.4.1",
+        "karma": "1.2.0",
+        "karma-angular-filesort": "1.0.1",
+        "karma-coverage": "1.1.1",
+        "karma-jasmine": "1.0.2",
+        "karma-junit-reporter": "1.1.0",
+        "karma-ng-html2js-preprocessor": "1.0.0",
+        "karma-phantomjs-launcher": "1.0.0",
+        "object-assign": "4.0.1",
+        "phantomjs-prebuilt": "2.1.7",
+        "wiredep": "4.0.0",
+        "gulp-sourcemaps": "1.6.0",
+        "typescript": "1.7.5",
+        "gulp-typescript": "2.10.0",
+        "lodash": "4.15.0"
     }
 }

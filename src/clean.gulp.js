@@ -5,6 +5,6 @@ var del = require('del'),
 
 module.exports = function (options) {
     gulp.task('clean', function (cb) {
-        del(options.dist, cb);
+        del([options.dist], cb);
     });
 };

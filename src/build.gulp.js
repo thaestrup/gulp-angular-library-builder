@@ -7,8 +7,8 @@ var angularFilesort = require('gulp-angular-filesort'),
     path = require('path');
 
 module.exports = function (options) {
-    gulp.task('templates', function () {
-        return gulp.src([path.join(options.src, '**/*.js'), '!**/*.spec.js'])
+    gulp.task('templates', ['ts'], function () {
+        return gulp.src([path.join(options.src, '**/*.js'), path.join(options.dist, 'ts/**/*.js'), '!**/*.spec.js'])
             .pipe(ngTemplateStrings({ cwd: options.src }))
             .pipe(gulp.dest(path.join(options.dist, 'templates')));
     });
