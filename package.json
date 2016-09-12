@@ -17,11 +17,13 @@
             "email": "tal@nykredit.dk"
         }
     ],
-    "files": ["src"],
+    "files": [
+        "src"
+    ],
     "main": "src/index.js",
     "dependencies": {
         "del": "^2.2.0",
-        "eslint": "^3.3.1",
+        "eslint": "^3.4.0",
         "eslint-plugin-angular": "^1.0.0",
         "gulp": "^3.9.1",
         "gulp-angular-filesort": "^1.1.1",
