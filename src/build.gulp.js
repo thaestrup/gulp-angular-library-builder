@@ -1,8 +1,8 @@
 'use strict';
 
-var angularFilesort = require('gulp-angular-filesort'),
-    concat = require('gulp-concat'),
-    gulp = require('gulp'),
+var gulp = require('gulp'),
+    angularFilesort = require('gulp-angular-filesort'),
+    concat = require('gulp-concat'),    
     ngTemplateStrings = require('gulp-ng-template-strings'),
     path = require('path');
 
