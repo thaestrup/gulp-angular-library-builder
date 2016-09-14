@@ -9,7 +9,7 @@ module.exports = function (options) {
     gulp.task('server', function () {
 
         var config = assign({}, {
-            root: ['src', 'bower_components', 'target', 'font'],
+            root: ['src', 'bower_components', 'target', 'resources'],
             port: 8080,
             host: 'localhost',
             livereload: {
