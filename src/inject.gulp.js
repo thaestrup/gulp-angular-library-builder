@@ -10,10 +10,10 @@ var gulp = require('gulp'),
 module.exports = function (options) {
 
     gulp.task('inject', function (callback) {
-        sequence('inject:bower', 'inject:styles', 'inject:js', callback);
+        sequence('inject-bower', 'inject-styles', 'inject-js', callback);
     });
 
-    gulp.task('inject:styles', function () {
+    gulp.task('inject-styles', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(gulp.src('target/build/*.css', {
                 read: false
@@ -24,7 +24,7 @@ module.exports = function (options) {
             .pipe(gulp.dest('src/'));
     });
 
-    gulp.task('inject:bower', function () {
+    gulp.task('inject-bower', function () {
         return gulp.src('src/index.html')
             .pipe(wiredep({
                 directory: 'bower_components',
@@ -33,7 +33,7 @@ module.exports = function (options) {
             .pipe(gulp.dest('src/'));
     });
 
-    gulp.task('inject:js', function () {
+    gulp.task('inject-js', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
                 gulp.src(['src/**/*.js', '!src/**/*spec.js'])

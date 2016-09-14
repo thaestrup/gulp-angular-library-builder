@@ -26,7 +26,7 @@ module.exports = function (options) {
         livereload.listen(config.livereload.port);
 
         watch('src/**/*.js', watchOptions, function () {
-            gulp.start(['lint-es', 'test', 'inject:js'], function () {
+            gulp.start(['lint-es', 'test', 'inject-js'], function () {
                 livereload.reload();
             });
         });
