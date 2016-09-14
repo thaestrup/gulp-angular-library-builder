@@ -25,7 +25,9 @@
             "email": "jvr@nykredit.dk"
         }
     ],
-    "files": ["src"],
+    "files": [
+        "src"
+    ],
     "main": "src/index.js",
     "dependencies": {
         "del": "2.2.0",
@@ -45,7 +47,7 @@
         "karma-jasmine": "1.0.2",
         "karma-junit-reporter": "1.1.0",
         "karma-ng-html2js-preprocessor": "1.0.0",
-        "karma-phantomjs-launcher": "1.0.0",
+        "karma-phantomjs-launcher": "^1.0.2",
         "object-assign": "4.0.1",
         "phantomjs-prebuilt": "2.1.7",
         "wiredep": "4.0.0",
