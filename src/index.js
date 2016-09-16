@@ -9,7 +9,11 @@ module.exports = function (options) {
         src: 'src',
         dist: 'dist',
         target: 'target',
-        failOnError: true
+        failOnError: true,
+        test: {
+            browsers: ['PhantomJS'],
+            singleRun: true
+        }
     }, options);
 
     require('./clean.gulp')(options);
