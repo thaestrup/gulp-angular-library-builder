@@ -19,7 +19,7 @@ module.exports = function (options) {
         new Server({
             configFile: __dirname + '/karma.conf.js',
             files: bowerDeps.js.concat(path.join(options.src, '**/*.js'), path.join(options.dist, 'ts/**/*.js')),
-            singleRun: options.test.SingleRun,
+            singleRun: options.test.singleRun,
             dist: options.dist,
             ts: path.join(options.dist, 'ts/**/*.js'),
             browsers: options.test.browsers
