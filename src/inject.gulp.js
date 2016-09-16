@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 module.exports = function (options) {
 
     gulp.task('inject', function (callback) {
-        sequence('inject-bower', 'inject-styles', 'inject-js', callback);
+        sequence('inject-bower', 'inject-styles', 'inject-js', 'inject-ts', callback);
     });
 
     gulp.task('inject-styles', function () {
@@ -44,5 +44,17 @@ module.exports = function (options) {
             ))
             .pipe(gulp.dest('src/'));
     })
-
+	
+	gulp.task('inject-ts', function () {
+        return gulp.src('src/index.html')
+            .pipe(gulpInject(
+                gulp.src(['target/ts/**/*.js', '!src/**/*spec.js'])
+                .pipe(naturalSort())
+                .pipe(angularFilesort()), {
+					ignorePath: '/target/',
+					starttag: '<!-- inject:ts -->'
+                }
+            ))
+            .pipe(gulp.dest('src/'));
+    })
 };

@@ -30,12 +30,12 @@ module.exports = function (options) {
                 livereload.reload();
             });
         });
-        watch(['src/**/*spec.ts'], watchOptions, function () {
-            gulp.start('lint-es', 'test', function () {
+		watch(['src/**/*.ts'], watchOptions, function () {
+            gulp.start('templates', 'lint-es', 'test', 'inject-ts', function () {
                 livereload.reload();
             });
         });
-        watch('src/**/*.scss', watchOptions, function () {
+	    watch('src/**/*.scss', watchOptions, function () {
             gulp.start('lint-styles', 'styles', 'inject-styles', function () {
                 livereload.reload('*.css');
             });
