@@ -37,10 +37,10 @@ module.exports = function (options) {
 
     gulp.task('lint-es', function (failOnError) {
         var out;
-        if (!fs.existsSync(options.dist)) {
-            fs.mkdirSync(options.dist);
+        if (!fs.existsSync(options.target)) {
+            fs.mkdirSync(options.target);
         }
-        out = fs.createWriteStream(path.join(options.dist, 'es-lint-result.xml'));
+        out = fs.createWriteStream(path.join(options.target, 'es-lint-result.xml'));
         return gulp.src(path.join(options.src, '**/*.js'))
             .pipe(eslint())
             .pipe(eslint.format())

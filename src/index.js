@@ -10,11 +10,18 @@ module.exports = function (options) {
         dist: 'dist',
         target: 'target',
         failOnError: true,
+        server: {
+            port: 8080,
+            host: 'localhost',
+            livereload: {
+                port: 35729
+            }
+        },
         test: {
             browsers: ['PhantomJS'],
             singleRun: true
         },
-        distributions: ['target/build/**/*', '!**/*.html', 'src/**/*.d.ts', 'bower.json', 'README.md', 'resources/**/*'],
+        distributions: ['target/build/**/*', '!**/*.html', 'src/**/*.d.ts', 'bower.json', 'README.md', 'resources/**/*']
     }, options);
 
     require('./clean.gulp')(options);

@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     wiredep = require('wiredep').stream,
     gulpInject = require('gulp-inject'),
     angularFilesort = require('gulp-angular-filesort'),
-    naturalSort = require('gulp-natural-sort');
+    naturalSort = require('gulp-natural-sort'),
+    path = require('path');
 
 module.exports = function (options) {
 
@@ -15,11 +16,11 @@ module.exports = function (options) {
 
     gulp.task('inject-styles', function () {
         return gulp.src('src/index.html')
-            .pipe(gulpInject(gulp.src('target/build/*.css', {
+            .pipe(gulpInject(gulp.src(path.join(options.target, '/build/*.css'), {
                 read: false
             }), {
                 relative: false,
-                ignorePath: '/target/'
+                ignorePath: path.join('/', options.target, '/')
             }))
             .pipe(gulp.dest('src/'));
     });
@@ -48,10 +49,10 @@ module.exports = function (options) {
 	gulp.task('inject-ts', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
-                gulp.src(['target/ts/**/*.js', '!src/**/*spec.js'])
+                gulp.src([path.join(options.target, 'ts/**/*.js'), '!**/*spec.js'])
                 .pipe(naturalSort())
                 .pipe(angularFilesort()), {
-					ignorePath: '/target/',
+					ignorePath: path.join('/', options.target, '/'),
 					starttag: '<!-- inject:ts -->'
                 }
             ))
