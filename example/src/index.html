@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="typescript">
+
+<head>
+    <meta name="appRoot" content="/" />
+    <meta charset="UTF-8" />
+    <title>Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <!-- build:css styles/main.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/build/demo.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+    
+    <!-- For ng-cloak to work without flickering, this style must be loaded early -->
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+<!--    <style>
+        @font-face {
+            font-family: 'Glyphicons Halflings';
+            src: url('fonts/glyphicons-halflings-regular.woff') format("woff");
+        }
+        
+        @font-face {
+            font-family: 'Glyphicons Regular';
+            src: url('fonts/glyphicons-regular.woff') format('woff');
+        }
+    </style>-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="jquery/dist/jquery.js"></script>
+    <script src="angular/angular.js"></script>
+    <script src="angular-i18n/angular-locale_da-dk.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="angular-animate/angular-animate.js"></script>
+    <script src="waypoints/waypoints.js"></script>
+    <script src="SHA-1/sha1.js"></script>
+    <script src="angulartics/src/angulartics.js"></script>
+    <script src="angulartics/src/angulartics-adobe.js"></script>
+    <script src="angulartics/src/angulartics-chartbeat.js"></script>
+    <script src="angulartics/src/angulartics-cnzz.js"></script>
+    <script src="angulartics/src/angulartics-flurry.js"></script>
+    <script src="angulartics/src/angulartics-ga-cordova.js"></script>
+    <script src="angulartics/src/angulartics-ga.js"></script>
+    <script src="angulartics/src/angulartics-gtm.js"></script>
+    <script src="angulartics/src/angulartics-kissmetrics.js"></script>
+    <script src="angulartics/src/angulartics-mixpanel.js"></script>
+    <script src="angulartics/src/angulartics-piwik.js"></script>
+    <script src="angulartics/src/angulartics-scroll.js"></script>
+    <script src="angulartics/src/angulartics-segmentio.js"></script>
+    <script src="angulartics/src/angulartics-splunk.js"></script>
+    <script src="angulartics/src/angulartics-woopra.js"></script>
+    <script src="angulartics/src/angulartics-marketo.js"></script>
+    <script src="angulartics/src/angulartics-intercom.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- inject:js -->
+    <script src="firstModule/module.js"></script>
+    <script src="secondModule/myDirective.js"></script>
+    <script src="secondModule/module.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:ts -->
+    <script src="/ts/firstModule/myService.js"></script>
+    <!-- endinject -->
+
+    <!-- angular app -->
+    <script type="text/javascript">
+        angular.module('Demo', ['secondModule']);
+    </script>
+</head>
+
+<body ng-app="Demo">
+    <div class="container">
+        <div class="well">
+            <span class="glyphicon glyphicon-road"/>
+            <my-directive/>
+        </div>        
+    </div>
+</body>
+
+</html>

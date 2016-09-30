@@ -1,0 +1,6 @@
+tmp
+target
+PhantomJS*
+bower_components
+node_modules
+env.properties
