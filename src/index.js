@@ -13,7 +13,8 @@ module.exports = function (options) {
         test: {
             browsers: ['PhantomJS'],
             singleRun: true
-        }
+        },
+        distributions: ['target/build/**/*', '!**/*.html', 'src/**/*.d.ts', 'bower.json', 'README.md', 'resources/**/*'],
     }, options);
 
     require('./clean.gulp')(options);

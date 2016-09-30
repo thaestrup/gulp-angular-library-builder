@@ -36,7 +36,7 @@ module.exports = function (options) {
             });
         });
 	    watch('src/**/*.scss', watchOptions, function () {
-            gulp.start('lint-styles', 'styles', 'inject-styles', function () {
+            gulp.start('lint-styles', 'styles-serve', 'inject-styles', function () {
                 livereload.reload('*.css');
             });
         });

@@ -7,11 +7,11 @@ var path = require('path'),
 module.exports = function (options) {
 
     gulp.task('dist', function (callback) {
-        sequence('clean', 'build', 'dist-copy', callback);
+        sequence('clean', 'build', 'styles-dist', 'dist-copy', callback);
     });
 
     gulp.task('dist-copy', function () {
-        return gulp.src([path.join(options.dist, 'build/**/*'), path.join(options.src, '**/*.d.ts'), 'bower.json', 'README.md'])
+        return gulp.src(options.distributions)
             .pipe(gulp.dest(path.join(options.dist, 'distribution')));
     });
 };
