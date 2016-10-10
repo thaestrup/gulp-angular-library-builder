@@ -51,7 +51,7 @@
         "object-assign": "4.0.1",
         "phantomjs-prebuilt": "2.1.7",
         "wiredep": "4.0.0",
-        "gulp-sourcemaps": "1.6.0",
+        "gulp-sourcemaps": "1.7.0",
         "typescript": "1.7.5",
         "gulp-typescript": "2.10.0",
         "lodash": "4.15.0"
