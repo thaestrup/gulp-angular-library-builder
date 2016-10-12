@@ -53,7 +53,7 @@
         "wiredep": "4.0.0",
         "gulp-sourcemaps": "2.0.1",
         "typescript": "1.8.10",
-        "gulp-typescript": "2.10.0",
+        "gulp-typescript": "3.0.2",
         "lodash": "4.16.3"
     }
 }
