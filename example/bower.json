@@ -1,0 +1,29 @@
+{
+  "name": "my-demo",
+  "version": "1.0.4",
+  "description": "My demo module",
+  "private": true,
+  "main": [
+    "myDemo.js"
+  ],
+  "ignore": [],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "angular": "~1.4.10",
+    "angular-i18n": "~1.4.10",
+    "angular-bootstrap": "~0.14.3",
+    "angular-animate": "~1.4.10",
+    "angulartics": "~0.17.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.10",
+    "DefinitelyTyped": "*"
+  },
+  "overrides": {
+    "angular-i18n": {
+      "main": [
+        "angular-locale_da-dk.js"
+      ]
+    }
+  }
+}
