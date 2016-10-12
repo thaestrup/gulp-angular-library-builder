@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
     <!-- build:css styles/main.css -->
     <!-- inject:css -->
     <link rel="stylesheet" href="/build/demo.css">
     <!-- endinject -->
     <!-- endbuild -->
-    
+
     <!-- For ng-cloak to work without flickering, this style must be loaded early -->
     <style>
         [ng\:cloak],
@@ -28,12 +28,12 @@
         }
     </style>
 
-<!--    <style>
+    <!--<style>
         @font-face {
             font-family: 'Glyphicons Halflings';
             src: url('fonts/glyphicons-halflings-regular.woff') format("woff");
         }
-        
+
         @font-face {
             font-family: 'Glyphicons Regular';
             src: url('fonts/glyphicons-regular.woff') format('woff');
@@ -71,12 +71,13 @@
 
 
     <!-- inject:js -->
-    <script src="firstModule/module.js"></script>
-    <script src="secondModule/myDirective.js"></script>
     <script src="secondModule/module.js"></script>
+    <script src="secondModule/myDirective.js"></script>
+    <script src="firstModule/module.js"></script>
     <!-- endinject -->
 
     <!-- inject:ts -->
+    <script src="/ts/secondModule/myOtherDirective.js"></script>
     <script src="/ts/firstModule/myService.js"></script>
     <!-- endinject -->
 
@@ -87,11 +88,12 @@
 </head>
 
 <body ng-app="Demo">
+    <my-other-directive></my-other-directive>
     <div class="container">
         <div class="well">
-            <span class="glyphicon glyphicon-road"/>
-            <my-directive/>
-        </div>        
+            <span class="glyphicon glyphicon-road" />
+            <my-directive></my-directive>
+        </div>
     </div>
 </body>
 

@@ -14,5 +14,5 @@ function myDirectiveFn(myService) {
 }
 
 angular
-    .module("firstModule")
+    .module("secondModule")
     .directive("myDirective", myDirectiveFn);
