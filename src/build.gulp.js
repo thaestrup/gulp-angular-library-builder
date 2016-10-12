@@ -9,9 +9,10 @@ var gulp = require('gulp'),
 module.exports = function(options) {
 
     gulp.task('concat', ['templates', 'ts'], function() {
-        return gulp.src([path.join(options.target, 'templates/**/*.js'),
+        return gulp.src([
                 path.join(options.src, '**/*.js'),
                 path.join(options.target, 'ts/**/*.js'),
+                path.join(options.target, 'templates/**/*.js'),
                 '!**/*.spec.js', '!**/*.spec.ts'
             ])
             .pipe(angularFilesort())
@@ -21,10 +22,11 @@ module.exports = function(options) {
 
     gulp.task('templates', function() {
         var templateCacheOptions = {
-            module: options.module + "-templates"
+            module: options.module + "-templates",
+            standalone: true
         };
         return gulp.src([path.join(options.src, '**/*.html'), '!index.html'])
-            .pipe(templateCache('templateCache.js' , templateCacheOptions))
+            .pipe(templateCache('templateCache.js', templateCacheOptions))
             .pipe(gulp.dest(path.join(options.target, 'templates')));
     });
 
