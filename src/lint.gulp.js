@@ -11,7 +11,7 @@ var eslint = require('gulp-eslint'),
 module.exports = function (options) {
 
     gulp.task('lint-js-autofix', function () {
-        return gulp.src('src/**/*.js')
+        return gulp.src([path.join(options.src, '**/*.js'), '!**/legacy/**'])
             .pipe(eslint({
                 fix: true
             }))
@@ -20,7 +20,7 @@ module.exports = function (options) {
     });
 
     gulp.task('lint-html', function (failOnError) {
-        return gulp.src('src/**/*html')
+        return gulp.src([path.join(options.src, '**/*.html'), '!**/legacy/**'])
             .pipe(htmllint({
                 'config': '.htmllintrc',
                 'failOnError': options.failOnError
@@ -28,11 +28,11 @@ module.exports = function (options) {
     });
 
     gulp.task('lint-styles', function (failOnError) {
-        return gulp.src('src/' + '**/*.scss')
+        return gulp.src([path.join(options.src, '**/*.scss'), '!**/legacy/**'])
             .pipe(scsslint({
                 'config': '.scss-lint.yml'
             }))
-        .pipe(gulpif(options.failOnError, scsslint.failReporter()));        
+        .pipe(gulpif(options.failOnError, scsslint.failReporter()));
     });
 
     gulp.task('lint-es', function (failOnError) {
@@ -41,7 +41,7 @@ module.exports = function (options) {
             fs.mkdirSync(options.target);
         }
         out = fs.createWriteStream(path.join(options.target, 'es-lint-result.xml'));
-        return gulp.src(path.join(options.src, '**/*.js'))
+        return gulp.src([path.join(options.src, '**/*.js'), '!**/legacy/**'])
             .pipe(eslint())
             .pipe(eslint.format())
             .pipe(eslint.format('checkstyle', out))
