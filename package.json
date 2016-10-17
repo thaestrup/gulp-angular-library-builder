@@ -31,7 +31,7 @@
     "main": "src/index.js",
     "dependencies": {
         "del": "2.2.0",
-        "eslint": "^3.5.0",
+        "eslint": "^3.8.1",
         "eslint-plugin-angular": "1.0.0",
         "gulp": "3.9.1",
         "gulp-angular-filesort": "1.1.1",
