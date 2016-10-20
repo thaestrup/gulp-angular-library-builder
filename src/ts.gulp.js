@@ -12,8 +12,7 @@ module.exports = function (options) {
         target: "es5",
         sourceMap: true,
         declarationFiles: true,
-        noExternalResolve: false,
-        sortOutput: true,
+        noResolve: false,
         removeComments: false,
         preserveConstEnums: true
     };
@@ -22,9 +21,7 @@ module.exports = function (options) {
      * Compile all typescript files and source maps from options.src and output them to options.dist
      */
     gulp.task('ts', function () {
-        var tsProject = ts.createProject({
-            compilerOptions: defaults
-        }),
+       var tsProject = ts.createProject(defaults),
             tsResult = gulp.src(path.join(options.src, '**/*.ts'))
                 .pipe(sourcemaps.init())
                 .pipe(tsProject(tsProject)).js
