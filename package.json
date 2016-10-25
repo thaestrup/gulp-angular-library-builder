@@ -52,7 +52,7 @@
         "phantomjs-prebuilt": "2.1.13",
         "wiredep": "4.0.0",
         "gulp-sourcemaps": "2.0.1",
-        "typescript": "1.8.10",
+        "typescript": "2.0.6",
         "gulp-typescript": "2.10.0",
         "lodash": "4.16.3"
     }
