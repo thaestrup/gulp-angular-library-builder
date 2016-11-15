@@ -54,6 +54,6 @@
         "gulp-sourcemaps": "2.0.1",
         "typescript": "1.8.10",
         "gulp-typescript": "2.10.0",
-        "lodash": "4.16.3"
+        "lodash": "4.17.1"
     }
 }
