@@ -20,8 +20,8 @@
 ## Init
 Install dependent modules for the toolchain (gulp)
 
-install nodejs 4.2.2 - git 2.6.3 - ruby 2.2.2 - python 2.7.10 or newer
-
-1. $ npm install
-2. $ npm-check-updates -u (upgrade to newest npm packages)
+1. $my-init.bat
+2. $npm install
+3. $bower install
+4. $gulp
 2. $ bower-update-all (upgrade to newest bower packages)
