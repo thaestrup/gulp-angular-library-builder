@@ -6,6 +6,7 @@ var eslint = require('gulp-eslint'),
     path = require('path'),
     htmllint = require('gulp-htmllint'),
     scsslint = require('gulp-scss-lint'),
+    tslint = require("gulp-tslint"),
     gulpif = require('gulp-if');
 
 module.exports = function (options) {
@@ -32,7 +33,7 @@ module.exports = function (options) {
             .pipe(scsslint({
                 'config': '.scss-lint.yml'
             }))
-        .pipe(gulpif(options.failOnError, scsslint.failReporter()));
+            .pipe(gulpif(options.failOnError, scsslint.failReporter()));
     });
 
     gulp.task('lint-es', function (failOnError) {
@@ -49,6 +50,17 @@ module.exports = function (options) {
 
     });
 
-    gulp.task('lint', ['lint-es', 'lint-html', 'lint-styles']);
+
+    gulp.task('lint-ts', function (failOnError) {
+        return gulp.src([path.join(options.src, '**/*.ts'), '!**/legacy/**'])
+            .pipe(tslint({
+                formatter: "prose"
+            }))
+            .pipe(tslint.report({
+                emitError: options.failOnError
+            }))
+    });
+
+    gulp.task('lint', ['lint-es', 'lint-ts', 'lint-html', 'lint-styles']);
 
 };

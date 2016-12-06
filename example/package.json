@@ -1,12 +1,15 @@
 {
-    "name": "Example",
-    "version": "0.0.1",
-    "description": "",
-    "private": true,
-    "repository": "https://git.tools.nykredit.it/projects/DEV/repos/bower-onl-common",
-    "devDependencies": {
-        "gulp": "3.9.1",
-        "gulp-angular-library-builder": "c:/projects/gulp-angular-library-builder"
-    },
-    "readme": "README.md"
+  "name": "Example",
+  "version": "0.0.1",
+  "description": "",
+  "private": true,
+  "repository": "https://git.tools.nykredit.it/projects/DEV/repos/bower-onl-common",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-angular-library-builder": "c:/projects/gulp-angular-library-builder"
+  },
+  "readme": "README.md",
+  "dependencies": {
+
+  }
 }
