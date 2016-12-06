@@ -1,4 +1,4 @@
-/// <reference path="../../bower_components/DefinitelyTyped/angularjs/legacy/angular-1.4.d.ts" />
+/// <reference path="../_All.d.ts" />
 
 "use strict";
 
@@ -18,7 +18,7 @@ module LoantypeAdvisor {
 
             this.$timeout(() => {
                 this.number--;
-                if (this.number >= 0) {
+                if (this.number > 0) {
                     this.countDown();
                 }
             }, 1000);

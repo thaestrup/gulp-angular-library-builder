@@ -1,3 +1,5 @@
+/// <reference path="../_All.d.ts" />
+
 'use strict';
 
 function myServiceFn() {

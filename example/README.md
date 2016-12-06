@@ -24,3 +24,4 @@ Install dependent modules for the toolchain (gulp)
 2. $npm install
 3. $bower install
 4. $gulp
+2. $ bower-update-all (upgrade to newest bower packages)

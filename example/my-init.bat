@@ -9,3 +9,6 @@ git config --global url."https://".insteadOf git://
 
 echo Installing missing nodejs packages
 call npm install
+call bower install
+
+gulp
