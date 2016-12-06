@@ -8,13 +8,13 @@
   ],
   "ignore": [],
   "dependencies": {
-    "angular": "~1.5.8",
-    "angular-i18n": "~1.5.8",
+    "angular": "~1.5.9",
+    "angular-i18n": "~1.5.9",
     "angular-bootstrap": "~2.2.0",
-    "angular-animate": "~1.5.8"
+    "angular-animate": "~1.5.9"
   },
   "devDependencies": {
-    "angular-mocks": "~1.5.8",
+    "angular-mocks": "~1.5.9",
     "DefinitelyTyped": "*"
   },
   "overrides": {
@@ -23,5 +23,8 @@
         "angular-locale_da-dk.js"
       ]
     }
+  },
+  "resolutions": {
+    "angular": "1.5.9"
   }
 }
