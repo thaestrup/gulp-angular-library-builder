@@ -37,7 +37,7 @@ module.exports = function (options) {
     gulp.task('inject-js', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
-                gulp.src(['src/**/*.js', '!src/**/*spec.js'])
+                gulp.src([path.join(options.src, '**/*.js'), '!**/*spec.js'])
                 .pipe(naturalSort())
                 .pipe(angularFilesort()), {
                     relative: true
@@ -45,15 +45,28 @@ module.exports = function (options) {
             ))
             .pipe(gulp.dest('src/'));
     })
-	
-	gulp.task('inject-ts', function () {
+
+    gulp.task('inject-ts', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
                 gulp.src([path.join(options.target, 'ts/**/*.js'), '!**/*spec.js'])
                 .pipe(naturalSort())
                 .pipe(angularFilesort()), {
-					ignorePath: path.join('/', options.target, '/'),
-					starttag: '<!-- inject:ts -->'
+                    ignorePath: path.join('/', options.target, '/'),
+                    starttag: '<!-- inject:ts -->'
+                }
+            ))
+            .pipe(gulp.dest('src/'));
+    })
+
+        gulp.task('inject-templates', function () {
+        return gulp.src('src/index.html')
+            .pipe(gulpInject(
+                gulp.src([path.join(options.target, 'templates/**/*.js'), '!**/*spec.js'])
+                .pipe(naturalSort())
+                .pipe(angularFilesort()), {
+                    ignorePath: path.join('/', options.target, '/'),
+                    starttag: '<!-- inject:templates -->'
                 }
             ))
             .pipe(gulp.dest('src/'));

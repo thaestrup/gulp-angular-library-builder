@@ -7,6 +7,7 @@ var options = {
     module: 'my-demo',
     name: 'my-demo',
     hostHeader: 'localhost',
+    failOnError: false
    /* see all options in gulp-angular-library-builder index.js*/
 };
 

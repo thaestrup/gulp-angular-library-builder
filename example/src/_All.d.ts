@@ -1,0 +1,9 @@
+/// <reference path="../bower_components/DefinitelyTyped/angularjs/angular.d.ts"/>
+/// <reference path="../bower_components/DefinitelyTyped/angular-ui-router/angular-ui-router.d.ts" />
+/// <reference path="../bower_components/DefinitelyTyped/angular-material/angular-material.d.ts"/>
+/// <reference path="../bower_components/DefinitelyTyped/angular-translate/angular-translate.d.ts"/>
+/// <reference path="../bower_components/DefinitelyTyped/angular-dynamic-locale/angular-dynamic-locale.d.ts"/>
+/// <reference path="../bower_components/DefinitelyTyped/lodash/lodash.d.ts" />
+/// <reference path="../bower_components/DefinitelyTyped/jasmine/jasmine.d.ts" />
+/// <reference path="../bower_components/DefinitelyTyped/angularjs/angular-mocks.d.ts" />
+/// <reference path="../bower_components/DefinitelyTyped/datejs/datejs.d.ts" />

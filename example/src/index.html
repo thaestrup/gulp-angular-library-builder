@@ -9,12 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
-    <!-- build:css styles/main.css -->
-    <!-- inject:css -->
-    <link rel="stylesheet" href="/build/demo.css">
-    <!-- endinject -->
-    <!-- endbuild -->
+
 
     <!-- For ng-cloak to work without flickering, this style must be loaded early -->
     <style>
@@ -26,23 +21,19 @@
         .x-ng-cloak {
             display: none !important;
         }
+
     </style>
 
-    <!--<style>
-        @font-face {
-            font-family: 'Glyphicons Halflings';
-            src: url('fonts/glyphicons-halflings-regular.woff') format("woff");
-        }
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 
-        @font-face {
-            font-family: 'Glyphicons Regular';
-            src: url('fonts/glyphicons-regular.woff') format('woff');
-        }
-    </style>-->
+    <!-- build:css styles/main.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/build/demo.css">
+    <!-- endinject -->
+    <!-- endbuild -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="jquery/dist/jquery.js"></script>
     <script src="angular/angular.js"></script>
     <script src="angular-i18n/angular-locale_da-dk.js"></script>
     <script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -62,9 +53,13 @@
     <script src="/ts/firstModule/myService.js"></script>
     <!-- endinject -->
 
+    <!-- inject:templates -->
+    <!-- endinject -->
+
     <!-- angular app -->
     <script type="text/javascript">
         angular.module('Demo', ['secondModule']);
+
     </script>
 </head>
 

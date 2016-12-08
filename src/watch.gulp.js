@@ -15,7 +15,7 @@ module.exports = function (options) {
             }
         };
 
-    gulp.task('watch', function () {    
+    gulp.task('watch', function () {
         var config = assign({}, {
             livereload: {
                 port: 35729
@@ -30,18 +30,18 @@ module.exports = function (options) {
                 livereload.reload();
             });
         });
-		watch(['src/**/*.ts'], watchOptions, function () {
-            gulp.start('templates', 'lint-es', 'test', 'inject-ts', function () {
+        watch(['src/**/*.ts'], watchOptions, function () {
+            gulp.start('lint-ts', 'test', 'inject-ts', function () {
                 livereload.reload();
             });
         });
-	    watch('src/**/*.scss', watchOptions, function () {
+        watch('src/**/*.scss', watchOptions, function () {
             gulp.start('lint-styles', 'styles-serve', 'inject-styles', function () {
                 livereload.reload('*.css');
             });
         });
         watch(['src/**/*.html'], watchOptions, function () {
-            gulp.start('lint-html', function () {
+            gulp.start('lint-html', 'inject-templates', function () {
                 livereload.reload();
             });
         });
