@@ -6,7 +6,7 @@ var eslint = require('gulp-eslint'),
     path = require('path'),
     htmllint = require('gulp-htmllint'),
     scsslint = require('gulp-scss-lint'),
-    tslint = require("gulp-tslint"),
+    //tslint = require("gulp-tslint"),
     debug = require('gulp-debug'),
     gulpif = require('gulp-if');
 
