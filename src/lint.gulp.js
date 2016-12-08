@@ -6,7 +6,8 @@ var eslint = require('gulp-eslint'),
     path = require('path'),
     htmllint = require('gulp-htmllint'),
     scsslint = require('gulp-scss-lint'),
-    tslint = require("gulp-tslint"),
+    //tslint = require("gulp-tslint"),
+    debug = require('gulp-debug'),
     gulpif = require('gulp-if');
 
 module.exports = function (options) {
@@ -52,13 +53,16 @@ module.exports = function (options) {
 
 
     gulp.task('lint-ts', function (failOnError) {
-        return gulp.src([path.join(options.src, '**/*.ts'), '!**/legacy/**'])
-            .pipe(tslint({
+        return gulp.src([path.join(options.src, '**/*.ts'), '!**/legacy/**', '!**/_*'])
+            .pipe(debug())
+            //TODO lint ts
+            /*.pipe(tslint({
                 formatter: "prose"
             }))
             .pipe(tslint.report({
-                emitError: options.failOnError
-            }))
+                emitError: options.failOnError,
+                formatter: "verbose"
+            }))*/
     });
 
     gulp.task('lint', ['lint-es', 'lint-ts', 'lint-html', 'lint-styles']);
