@@ -6,7 +6,7 @@ module LoantypeAdvisor {
 
     class CountDownController {
 
-        private number: number;
+        private numberd: number;
 
         static $inject = ['$timeout']; //fix minification
         constructor(private $timeout: ng.ITimeoutService) {
