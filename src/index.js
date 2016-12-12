@@ -36,5 +36,4 @@ module.exports = function (options) {
     require('./server.gulp')(options);
     require('./watch.gulp')(options);
     require('./serve.gulp')(options);
-
-}
+};

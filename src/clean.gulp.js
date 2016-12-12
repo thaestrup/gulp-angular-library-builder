@@ -1,14 +1,10 @@
 'use strict';
 
-var clean = require('gulp-clean'),
+var del = require('del'),
     gulp = require('gulp');
 
 module.exports = function (options) {
-    gulp.task('clean', function (cb) {
-        return gulp.src([options.dist, options.target], {
-                read: false
-            })
-            .pipe(clean());
+    gulp.task('clean', function () {
+        return del([options.dist, options.target]);
     });
-
 };

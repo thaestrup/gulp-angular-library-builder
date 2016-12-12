@@ -38,37 +38,37 @@ module.exports = function (options) {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
                 gulp.src([path.join(options.src, '**/*.js'), '!**/*spec.js'])
-                .pipe(naturalSort())
-                .pipe(angularFilesort()), {
-                    relative: true
-                }
+                    .pipe(naturalSort())
+                    .pipe(angularFilesort()), {
+                        relative: true
+                    }
             ))
             .pipe(gulp.dest('src/'));
-    })
+    });
 
     gulp.task('inject-ts', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
                 gulp.src([path.join(options.target, 'ts/**/*.js'), '!**/*spec.js'])
-                .pipe(naturalSort())
-                .pipe(angularFilesort()), {
-                    ignorePath: path.join('/', options.target, '/'),
-                    starttag: '<!-- inject:ts -->'
-                }
+                    .pipe(naturalSort())
+                    .pipe(angularFilesort()), {
+                        ignorePath: path.join('/', options.target, '/'),
+                        starttag: '<!-- inject:ts -->'
+                    }
             ))
             .pipe(gulp.dest('src/'));
-    })
+    });
 
-        gulp.task('inject-templates', function () {
+    gulp.task('inject-templates', function () {
         return gulp.src('src/index.html')
             .pipe(gulpInject(
                 gulp.src([path.join(options.target, 'templates/**/*.js'), '!**/*spec.js'])
-                .pipe(naturalSort())
-                .pipe(angularFilesort()), {
-                    ignorePath: path.join('/', options.target, '/'),
-                    starttag: '<!-- inject:templates -->'
-                }
+                    .pipe(naturalSort())
+                    .pipe(angularFilesort()), {
+                        ignorePath: path.join('/', options.target, '/'),
+                        starttag: '<!-- inject:templates -->'
+                    }
             ))
             .pipe(gulp.dest('src/'));
-    })
+    });
 };

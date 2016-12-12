@@ -6,21 +6,21 @@ var gulp = require('gulp'),
     templateCache = require('gulp-angular-templatecache'),
     path = require('path');
 
-module.exports = function(options) {
+module.exports = function (options) {
 
-    gulp.task('concat', ['templates', 'ts'], function() {
+    gulp.task('concat', ['templates', 'ts'], function () {
         return gulp.src([
-                path.join(options.src, '**/*.js'),
-                path.join(options.target, 'ts/**/*.js'),
-                path.join(options.target, 'templates/**/*.js'),
-                '!**/*.spec.js', '!**/*.spec.ts'
-            ])
+            path.join(options.src, '**/*.js'),
+            path.join(options.target, 'ts/**/*.js'),
+            path.join(options.target, 'templates/**/*.js'),
+            '!**/*.spec.js', '!**/*.spec.ts'
+        ])
             .pipe(angularFilesort())
             .pipe(concat(options.name + ".js"))
             .pipe(gulp.dest(path.join(options.target, 'build')));
     });
 
-    gulp.task('templates', function() {
+    gulp.task('templates', function () {
         var templateCacheOptions = {
             module: options.module + "-templates",
             standalone: true
@@ -30,7 +30,7 @@ module.exports = function(options) {
             .pipe(gulp.dest(path.join(options.target, 'templates')));
     });
 
-    gulp.task('html', function() {
+    gulp.task('html', function () {
         return gulp.src(path.join(options.src, '*.html'))
             .pipe(gulp.dest(path.join(options.target, 'build')));
     });

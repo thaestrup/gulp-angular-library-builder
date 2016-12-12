@@ -21,7 +21,7 @@ module.exports = function (options) {
             .pipe(gulp.dest('src/'));
     });
 
-    gulp.task('lint-html', function (failOnError) {
+    gulp.task('lint-html', function () {
         return gulp.src([path.join(options.src, '**/*.html'), '!**/legacy/**'])
             .pipe(htmllint({
                 'config': '.htmllintrc',
@@ -29,7 +29,7 @@ module.exports = function (options) {
             }));
     });
 
-    gulp.task('lint-styles', function (failOnError) {
+    gulp.task('lint-styles', function () {
         return gulp.src([path.join(options.src, '**/*.scss'), '!**/legacy/**'])
             .pipe(scsslint({
                 'config': '.scss-lint.yml'
@@ -37,7 +37,7 @@ module.exports = function (options) {
             .pipe(gulpif(options.failOnError, scsslint.failReporter()));
     });
 
-    gulp.task('lint-es', function (failOnError) {
+    gulp.task('lint-es', function () {
         var out;
         if (!fs.existsSync(options.target)) {
             fs.mkdirSync(options.target);
@@ -52,7 +52,7 @@ module.exports = function (options) {
     });
 
 
-    gulp.task('lint-ts', function (failOnError) {
+    gulp.task('lint-ts', function () {
         return gulp.src([path.join(options.src, '**/*.ts'), '!**/legacy/**', '!**/_*'])
             .pipe(debug())
             .pipe(tslint({
