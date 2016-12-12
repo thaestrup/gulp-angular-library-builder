@@ -40,7 +40,7 @@ module.exports = function (options) {
                 livereload.reload('*.css');
             });
         });
-        watch(['src/**/*.html'], watchOptions, function () {
+        watch(['src/**/*.html', '!**/index.html'], watchOptions, function () {
             gulp.start('lint-html', 'inject-templates', function () {
                 livereload.reload();
             });
