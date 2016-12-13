@@ -1,15 +1,15 @@
 'use strict';
 
 var bower = require('gulp-bower'),
-        Server = require('karma').Server,
-        path = require('path'),
-        gulp = require('gulp'),
-        wiredep = require('wiredep');
+    Server = require('karma').Server,
+    path = require('path'),
+    gulp = require('gulp'),
+    wiredep = require('wiredep');
 
 module.exports = function (options) {
     gulp.task('bower', function () {
         return bower();
-    });   
+    });
 
     gulp.task('test', ['bower', 'ts'], function (cb) {
         var bowerDeps = wiredep({

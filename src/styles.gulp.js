@@ -30,6 +30,4 @@ module.exports = function (options) {
         return gulp.src(['src/**/*.scss'])
             .pipe(gulp.dest(path.join(options.target,'build/scss/')));
     });
-
-
 };

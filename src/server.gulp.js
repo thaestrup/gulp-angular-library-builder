@@ -19,5 +19,4 @@ module.exports = function (options) {
 
         connect.server(config);
     });
-
 };

@@ -7,13 +7,13 @@ var gulp = require('gulp'),
 
 module.exports = function (options) {
 
-    var  watchOptions = {
-            usePolling: true,
-            awaitWriteFinish: {
-                stabilityThreshold: 2000,
-                pollInterval: 100
-            }
-        };
+    var watchOptions = {
+        usePolling: true,
+        awaitWriteFinish: {
+            stabilityThreshold: 2000,
+            pollInterval: 100
+        }
+    };
 
     gulp.task('watch', function () {
         var config = assign({}, {

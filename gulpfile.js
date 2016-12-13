@@ -13,4 +13,8 @@ gulp.task('static-files', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('default', ['dist']);
+gulp.task('clean', function (cb) {
+    del('dist', cb);
+});
+
+gulp.task('default', ['source-files', 'static-files']);

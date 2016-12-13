@@ -32,5 +32,4 @@ module.exports = function (options) {
             .pipe(gulp.dest(path.join(options.target, "ts")));
         return tsResult;
     });
-
 };

@@ -20,5 +20,4 @@ module.exports = function (options) {
             repository: options.repository
         }));
     });
-
-}
+};
