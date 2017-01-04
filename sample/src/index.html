@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" data-framework="typescript">
+
+<head>
+    <meta name="appRoot" content="/" />
+    <meta charset="UTF-8" />
+    <title>Demo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+
+
+    <!-- For ng-cloak to work without flickering, this style must be loaded early -->
+    <style>
+        [ng\:cloak],
+        [ng-cloak],
+        [data-ng-cloak],
+        [x-ng-cloak],
+        .ng-cloak,
+        .x-ng-cloak {
+            display: none !important;
+        }
+
+    </style>
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+    <!-- build:css styles/main.css -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/build/demo.css">
+    <!-- endinject -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="angular/angular.js"></script>
+    <script src="angular-i18n/angular-locale_da-dk.js"></script>
+    <script src="angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="angular-animate/angular-animate.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+    <!-- inject:js -->
+    <script src="secondModule/module.js"></script>
+    <script src="secondModule/myDirective.js"></script>
+    <script src="firstModule/module.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:ts -->
+    <script src="/ts/secondModule/myOtherDirective.js"></script>
+    <script src="/ts/firstModule/myService.js"></script>
+    <!-- endinject -->
+
+    <!-- inject:templates -->
+    <!-- endinject -->
+
+    <!-- angular app -->
+    <script type="text/javascript">
+        angular.module('Demo', ['secondModule']);
+
+    </script>
+</head>
+
+<body ng-app="Demo">
+    <my-other-directive></my-other-directive>
+    <div class="container">
+        <div class="well">
+            <span class="glyphicon glyphicon-road" />
+            <my-directive></my-directive>
+        </div>
+    </div>
+</body>
+
+</html>

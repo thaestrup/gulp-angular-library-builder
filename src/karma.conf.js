@@ -31,6 +31,8 @@ module.exports = function (config) {
             'karma-jasmine',
             'karma-angular-filesort',
             'karma-phantomjs-launcher',
+            'karma-chrome-launcher',
+            'karma-firefox-launcher',
             'karma-junit-reporter',
             'karma-coverage',
             'karma-ng-html2js-preprocessor'
@@ -39,7 +41,7 @@ module.exports = function (config) {
         colors: true,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['PhantomJS'],
+        browsers: config.browsers,
         captureTimeout: 60000,
         singleRun: false
     });

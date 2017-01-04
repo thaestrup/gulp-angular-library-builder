@@ -10,7 +10,7 @@ gulp.task('source-files', function () {
 
 gulp.task('static-files', function () {
     return gulp.src(['LICENSE', 'README.md', 'package.json'])
-            .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('dist'));
 });
 
 gulp.task('clean', function (cb) {

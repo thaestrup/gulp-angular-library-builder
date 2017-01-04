@@ -1,11 +1,17 @@
 'use strict';
 
 var path = require('path'),
-    gulp = require('gulp');
+    gulp = require('gulp'),
+    sequence = require('run-sequence').use(gulp);
 
 module.exports = function (options) {
-    gulp.task('dist', ['build'], function () {
-        return gulp.src([path.join(options.dist, 'build/**/*'), path.join(options.src, '**/*.d.ts'), 'bower.json', 'README.md'])
+
+    gulp.task('dist', function (callback) {
+        sequence('clean', 'build', 'styles-dist', 'dist-copy', callback);
+    });
+
+    gulp.task('dist-copy', function () {
+        return gulp.src(options.distributions)
             .pipe(gulp.dest(path.join(options.dist, 'distribution')));
     });
 };

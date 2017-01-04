@@ -49,3 +49,19 @@ You should configure your project from your ``gulpfile.js``, e.g.:
 The ``name`` is going to be the name of the library. In the above example a file named ``library-name.js`` is going to be created as part of the distribution.
 
 The ``repository`` is the Git repository to contain the distribution files - _not_ the repository containing the source code.
+
+## Init
+Install dependent modules for the toolchain (gulp)
+
+1. $ npm install
+
+## Release and prerelease
+Dist as bower component to git
+
+1. $ gulp release
+2. $ gulp prerelease
+
+## Developing 
+Run the module in a local development environment
+
+1. $ gulp serve
