@@ -43,7 +43,7 @@
     "gulp-debug": "^3.0.0",
     "gulp-eslint": "3.0.1",
     "gulp-git-release": "1.0.8",
-    "gulp-htmllint": "0.0.11",
+    "gulp-htmllint": "0.0.12",
     "gulp-if": "2.0.2",
     "gulp-inject": "4.1.0",
     "gulp-livereload": "3.8.1",
