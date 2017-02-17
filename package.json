@@ -66,7 +66,7 @@
     "karma-ng-html2js-preprocessor": "1.0.0",
     "karma-phantomjs-launcher": "1.0.2",
     "lodash": "4.17.2",
-    "npm-check-updates": "^2.8.6",
+    "npm-check-updates": "^2.10.3",
     "object-assign": "4.1.0",
     "phantomjs-prebuilt": "2.1.14",
     "run-sequence": "1.2.2",
